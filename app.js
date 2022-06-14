@@ -7,9 +7,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(cors({
-    origin: '*'
-}));
+app.use(cors());
 
 // * Paths for Express Configuration
 const publicDirectoryPath = path.join(__dirname, '/public');
