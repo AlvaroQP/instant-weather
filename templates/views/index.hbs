@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="icon" href="/img/weather_icon.png">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script defer src="./js/app.js"></script>
+</head>
+<body>
+    {{>header}}
+    <div class="main_content">
+        <p>Search for a location to get the weather forecast!</p><br>
+
+        <form action="" method="POST">
+            <input type="text" placeholder="Location" required>
+            <button>Search</button>
+        </form>
+
+        <div class="error_message"></div>
+
+        <div class="weather_results">
+            <div>
+                <img src="/img/globe.png" alt="location" title="location" class="weather_result_icon">
+                <span class="location_text"></span>
+                <span class="country_text"></span>
+            </div>
+            <div>
+                <img src="/img/hot.png" alt="temperature" title="temperature" class="weather_result_icon">
+                <span class="temperature_text"></span>
+                <span class="feels_like"></span>
+            </div>
+            <div>
+                <img src="/img/weather-forecast.png" alt="description" title="description" class="weather_result_icon">
+                <span class="description_text"></span>
+            </div>
+            <div>
+                <img src="/img/humidity.png" alt="humidity" title="humidity" class="weather_result_icon">
+                <span class="humidity_text"></span>
+            </div>
+            <div>
+                <img src="/img/wind.png" alt="wind speed" title="wind speed" class="weather_result_icon">
+                <span class="wind_text"></span>
+            </div>
+            <div>
+                <img src="/img/compass.png" alt="latitude longitude" title="latitude longitude" class="weather_result_icon">
+                <span class="lat_lon_title"></span>
+                <span class="lat_lon_text"></span>
+            </div>
+        </div>
+    </div>
+
+    {{>footer}}
+</body>
+</html>
