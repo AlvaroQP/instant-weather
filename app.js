@@ -1,3 +1,4 @@
+const cors = require('cors');
 const path = require('path');
 const hbs = require('hbs');
 const forecast = require('./src/utils/forecast');
@@ -5,6 +6,10 @@ const express = require('express');
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+app.use(cors({
+    origin: '*'
+}));
 
 // * Paths for Express Configuration
 const publicDirectoryPath = path.join(__dirname, '/public');
