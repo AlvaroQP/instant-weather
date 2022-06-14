@@ -18,7 +18,7 @@ weatherForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const location = locationInput.value;
 
-    fetch(`http://api.weatherstack.com/current?access_key=3210a8d3694afba1c512611d1bc64791&query=${location}`).then((response) => {
+    fetch(`/weather?address=${location}`).then((response) => {
         response.json().then((data) => {
             if(data.error) {
                 errorMessage.textContent = `${data.error}`;
